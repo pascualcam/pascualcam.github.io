@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Sidebar from "../components/sections/Sidebar";
-import TestButton from "../components/TestButton";
+import HiButton from "../components/HiButton";
 import AnimatedBicycle from "../components/AnimatedBicycle";
 import HeroSection from "../components/HeroSection.astro";
 ---
@@ -19,7 +19,11 @@ import HeroSection from "../components/HeroSection.astro";
 				>
 					<AnimatedBicycle slot="right" />
 				</HeroSection>
-
+				<section
+					class="border-t border-primary-200 dark:border-primary-800 pt-8"
+				>
+					<HiButton client:load />
+				</section>
 				<!-- Experience Section -->
 				<section class="mb-16">
 					<h2
@@ -344,13 +348,6 @@ import HeroSection from "../components/HeroSection.astro";
 							>Strava</a
 						>
 					</div>
-				</section>
-
-				<!-- Test Component (for development) -->
-				<section
-					class="border-t border-primary-200 dark:border-primary-800 pt-8"
-				>
-					<TestButton client:load />
 				</section>
 			</div>
 		</section>
