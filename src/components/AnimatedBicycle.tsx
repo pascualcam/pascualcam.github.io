@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-const wheelSpin = {
-    animation: 'spin 1.2s linear infinite',
-};
-const wheelPaused = {
-    animationPlayState: 'paused',
-};
-
 // Helper to generate spokes as SVG lines
 function Spokes({ cx, cy, r, count = 8, stroke = '#bbb', strokeWidth = 1 }: { cx: number; cy: number; r: number; count?: number; stroke?: string; strokeWidth?: number }) {
     const spokes = [];
@@ -62,19 +55,18 @@ const AnimatedBicycle = () => {
             className="bike"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{ cursor: 'pointer' }}
         >
             <title id="bicycleTitle">Animated Bicycle</title>
 
             {/* Rear Wheel */}
-            <g className="wheel rear-wheel" style={isHovered ? { ...wheelSpin, ...wheelPaused } : wheelSpin}>
+            <g className={`wheel rear-wheel spinning${isHovered ? ' paused' : ''}`}>
                 <circle cx="30" cy="60" r="16" stroke="#222" strokeWidth="3" fill={wheelFill} />
                 <Spokes cx={30} cy={60} r={14} count={10} stroke="#bbb" strokeWidth={1.2} />
                 <circle cx="30" cy="60" r="3" stroke="#888" strokeWidth="2" fill="#888" />
             </g>
 
             {/* Front Wheel */}
-            <g className="wheel front-wheel" style={isHovered ? { ...wheelSpin, ...wheelPaused } : wheelSpin}>
+            <g className={`wheel front-wheel spinning${isHovered ? ' paused' : ''}`}>
                 <circle cx="90" cy="60" r="16" stroke="#222" strokeWidth="3" fill={wheelFill} />
                 <Spokes cx={90} cy={60} r={14} count={10} stroke="#bbb" strokeWidth={1.2} />
                 <circle cx="90" cy="60" r="3" stroke="#888" strokeWidth="2" fill="#888" />
@@ -158,13 +150,17 @@ const AnimatedBicycle = () => {
                 @keyframes spin {
                     100% { transform: rotate(360deg); }
                 }
-                .bike .wheel { 
-                    transform-box: fill-box; 
-                    transform-origin: 50% 50%; 
+                .spinning {
+                    animation: spin 1.2s linear infinite;
+                    transform-box: fill-box;
+                    transform-origin: 50% 50%;
                 }
-                .bike .crank { 
-                    transform-box: fill-box; 
-                    transform-origin: 55px 58px; 
+                .paused {
+                    animation-play-state: paused;
+                }
+                .bike .crank {
+                    transform-box: fill-box;
+                    transform-origin: 55px 58px;
                 }
             `}</style>
         </svg>
