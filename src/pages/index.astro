@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/sections/Header';
+import TestButton from '../components/TestButton';
+---
+
+<Layout title="Pascual Camacho - Software Engineer">
+	<Header client:load />
+	
+	<main class="min-h-screen">
+		<!-- Hero Section -->
+		<section class="py-20">
+			<div class="max-w-4xl mx-auto px-6">
+				<div class="mb-16">
+					<h1 class="text-4xl md:text-5xl font-medium text-primary-900 dark:text-primary-100 mb-6">
+						Hi, I'm Pascual 😁
+					</h1>
+					<p class="text-xl text-primary-700 dark:text-primary-300 mb-8">
+						<strong>Software Engineer</strong> and tech enthusiast.
+					</p>
+				</div>
+
+				<!-- Experience Section -->
+				<section class="mb-16">
+					<h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Experience</h2>
+					<div class="space-y-4">
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+							<div>
+								<h3 class="font-medium text-primary-900 dark:text-primary-100">Orb</h3>
+								<p class="text-primary-600 dark:text-primary-400">Software Engineer</p>
+							</div>
+							<span class="text-primary-500 dark:text-primary-500 text-sm">2024 - Present</span>
+						</div>
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+							<div>
+								<h3 class="font-medium text-primary-900 dark:text-primary-100">E2E Analytics (Acqd by Accenture)</h3>
+								<p class="text-primary-600 dark:text-primary-400">Data Scientist and Developer</p>
+							</div>
+							<span class="text-primary-500 dark:text-primary-500 text-sm">2022 - 2024</span>
+						</div>
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+							<div>
+								<h3 class="font-medium text-primary-900 dark:text-primary-100">Vita Health</h3>
+								<p class="text-primary-600 dark:text-primary-400">Founder</p>
+							</div>
+							<span class="text-primary-500 dark:text-primary-500 text-sm">2019 - 2022</span>
+						</div>
+					</div>
+				</section>
+
+				<!-- Education Section -->
+				<section class="mb-16">
+					<h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Education</h2>
+					<div class="space-y-4">
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+							<div>
+								<h3 class="font-medium text-primary-900 dark:text-primary-100">Stanford University</h3>
+								<p class="text-primary-600 dark:text-primary-400">Master of Science</p>
+							</div>
+							<span class="text-primary-500 dark:text-primary-500 text-sm">2022</span>
+						</div>
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+							<div>
+								<h3 class="font-medium text-primary-900 dark:text-primary-100">New Mexico State University</h3>
+								<p class="text-primary-600 dark:text-primary-400">Bachelor of Science</p>
+							</div>
+							<span class="text-primary-500 dark:text-primary-500 text-sm">2020</span>
+						</div>
+					</div>
+				</section>
+
+				<!-- Selected Projects Section -->
+				<section class="mb-16">
+					<h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Selected projects (8)</h2>
+					<div class="grid gap-6 md:grid-cols-2">
+						<div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
+							<h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">Kuwi</h3>
+							<p class="text-primary-600 dark:text-primary-400 text-sm mb-3">a family tree generator</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Python</span>
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">SQLAlchemy</span>
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">PostgreSQL</span>
+							</div>
+						</div>
+						
+						<div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
+							<h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">Wild Oasis - hotel website</h3>
+							<p class="text-primary-600 dark:text-primary-400 text-sm mb-3">hotel booking platform</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">React</span>
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Next.js</span>
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">TailwindCSS</span>
+							</div>
+						</div>
+						
+						<div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
+							<h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">ML at Stanford</h3>
+							<p class="text-primary-600 dark:text-primary-400 text-sm mb-3">machine learning projects</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Pandas</span>
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Jupyter</span>
+							</div>
+						</div>
+						
+						<div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
+							<h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">This website</h3>
+							<p class="text-primary-600 dark:text-primary-400 text-sm mb-3">personal portfolio</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">TailwindCSS</span>
+								<span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">TypeScript</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Get in touch Section -->
+				<section class="mb-16">
+					<h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Get in touch</h2>
+					<p class="text-primary-700 dark:text-primary-300 mb-4">
+						Email <a href="mailto:me@pascualcam.com" class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 underline">me@pascualcam.com</a> or follow me below...
+					</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 transition-colors">X</a>
+						<a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 transition-colors">LinkedIn</a>
+						<a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 transition-colors">Github</a>
+						<a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 transition-colors">Literal</a>
+						<a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 transition-colors">Strava</a>
+					</div>
+				</section>
+
+				<!-- Test Component (for development) -->
+				<section class="border-t border-primary-200 dark:border-primary-800 pt-8">
+					<h3 class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-4">Development Test</h3>
+					<TestButton client:load />
+				</section>
+			</div>
+		</section>
+	</main>
+</Layout>

@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/sections/Header';
+---
+
+<Layout title="About - Pascual Camacho" description="Learn more about this website project and modern web development">
+  <Header client:load />
+  
+  <main class="min-h-screen py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="mb-16">
+        <h1 class="text-4xl font-medium text-primary-900 dark:text-primary-100 mb-6">About This Project</h1>
+        <p class="text-xl text-primary-700 dark:text-primary-300">
+          Learning modern web development through hands-on experience
+        </p>
+      </div>
+      
+      <div class="space-y-16">
+        <section>
+          <h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Why I'm Rebuilding My Website</h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-primary-700 dark:text-primary-300 mb-4">
+              I originally built my personal website using an Astro template, but I wanted to understand every aspect of the codebase. 
+              This rebuild is focused on learning and gaining full control over the functionality.
+            </p>
+            <p class="text-primary-700 dark:text-primary-300">
+              By building from scratch with Astro, React, and Tailwind CSS, I'm developing a deep understanding of modern web development 
+              tools and best practices.
+            </p>
+          </div>
+        </section>
+        
+        <section>
+          <h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">What I'm Learning</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6">
+              <h3 class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3">Astro Framework</h3>
+              <ul class="text-primary-700 dark:text-primary-300 space-y-2 text-sm">
+                <li>• File-based routing system</li>
+                <li>• Static site generation</li>
+                <li>• Component integration</li>
+                <li>• Performance optimization</li>
+              </ul>
+            </div>
+            
+            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6">
+              <h3 class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3">React Components</h3>
+              <ul class="text-primary-700 dark:text-primary-300 space-y-2 text-sm">
+                <li>• Interactive UI components</li>
+                <li>• State management</li>
+                <li>• Component composition</li>
+                <li>• Client-side interactivity</li>
+              </ul>
+            </div>
+            
+            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6">
+              <h3 class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3">Tailwind CSS</h3>
+              <ul class="text-primary-700 dark:text-primary-300 space-y-2 text-sm">
+                <li>• Utility-first styling</li>
+                <li>• Responsive design</li>
+                <li>• Custom design system</li>
+                <li>• Modern CSS practices</li>
+              </ul>
+            </div>
+            
+            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6">
+              <h3 class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3">Development Workflow</h3>
+              <ul class="text-primary-700 dark:text-primary-300 space-y-2 text-sm">
+                <li>• Git version control</li>
+                <li>• GitHub Actions CI/CD</li>
+                <li>• Static site deployment</li>
+                <li>• Performance monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Project Goals</h2>
+          <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 bg-primary-50 dark:bg-primary-900/20">
+            <ul class="text-primary-700 dark:text-primary-300 space-y-3">
+              <li class="flex items-start">
+                <span class="text-accent-600 dark:text-accent-400 mr-2">✅</span>
+                <span><strong>Full Understanding:</strong> Know every line of code in the project</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent-600 dark:text-accent-400 mr-2">✅</span>
+                <span><strong>Customization:</strong> Easy to modify and extend functionality</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent-600 dark:text-accent-400 mr-2">✅</span>
+                <span><strong>Modern Stack:</strong> Use current best practices and tools</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent-600 dark:text-accent-400 mr-2">✅</span>
+                <span><strong>Performance:</strong> Fast loading and optimal user experience</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent-600 dark:text-accent-400 mr-2">✅</span>
+                <span><strong>Maintainability:</strong> Clean, well-organized code structure</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+
+      </div>
+    </div>
+  </main>
+</Layout> 
