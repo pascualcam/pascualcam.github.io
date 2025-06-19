@@ -1,86 +1,171 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/sections/Header';
+import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/sections/Sidebar";
+import AnimatedBicycle from "../components/AnimatedBicycle";
+import HeroSection from "../components/HeroSection.astro";
 ---
 
-<Layout title="Projects - Pascual Camacho" description="Selected projects and work">
-  <Header client:load />
-  
+<Layout
+  title="Projects - Pascual Camacho"
+  description="Selected projects and work"
+>
+  <Sidebar slot="sidebar" client:load />
+
   <main class="min-h-screen py-20">
     <div class="max-w-4xl mx-auto px-6">
-      <div class="mb-16">
-        <h1 class="text-4xl font-medium text-primary-900 dark:text-primary-100 mb-6">Projects</h1>
-        <p class="text-xl text-primary-700 dark:text-primary-300">
-          Selected work and side projects
-        </p>
-      </div>
-      
+      <HeroSection title="Projects" subtitle="Selected work and side projects">
+        <AnimatedBicycle slot="right" />
+      </HeroSection>
+
       <div class="space-y-12">
         <section>
-          <h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-8">Featured Projects</h2>
+          <h2
+            class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-8"
+          >
+            Featured Projects
+          </h2>
           <div class="grid gap-8 md:grid-cols-2">
-            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-              <h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">Kuwi</h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">A family tree generator</p>
+            <div
+              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+            >
+              <h3
+                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+              >
+                Kuwi
+              </h3>
+              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+                A family tree generator
+              </p>
               <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
-                Built with Python, SQLAlchemy, and PostgreSQL. Helps families visualize and maintain their genealogy.
+                Built with Python, SQLAlchemy, and PostgreSQL. Helps families
+                visualize and maintain their genealogy.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Python</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">SQLAlchemy</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">PostgreSQL</span>
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >Python</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >SQLAlchemy</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >PostgreSQL</span
+                >
               </div>
             </div>
-            
-            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-              <h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">Wild Oasis</h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">Hotel booking platform</p>
+
+            <div
+              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+            >
+              <h3
+                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+              >
+                Wild Oasis
+              </h3>
+              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+                Hotel booking platform
+              </p>
               <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
-                A modern hotel website with booking functionality and admin dashboard.
+                A modern hotel website with booking functionality and admin
+                dashboard.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">React</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Next.js</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">TailwindCSS</span>
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >React</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >Next.js</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >TailwindCSS</span
+                >
               </div>
             </div>
-            
-            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-              <h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">ML at Stanford</h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">Machine learning projects</p>
+
+            <div
+              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+            >
+              <h3
+                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+              >
+                ML at Stanford
+              </h3>
+              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+                Machine learning projects
+              </p>
               <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
-                Various machine learning projects and experiments from Stanford coursework.
+                Various machine learning projects and experiments from Stanford
+                coursework.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Pandas</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Jupyter</span>
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >Pandas</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >Jupyter</span
+                >
               </div>
             </div>
-            
-            <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-              <h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">This Website</h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">Personal portfolio</p>
+
+            <div
+              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+            >
+              <h3
+                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+              >
+                This Website
+              </h3>
+              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+                Personal portfolio
+              </p>
               <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
-                Built with Astro, React, and Tailwind CSS. Learning modern web development.
+                Built with Astro, React, and Tailwind CSS. Learning modern web
+                development.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">Astro</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">React</span>
-                <span class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded">TailwindCSS</span>
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >Astro</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >React</span
+                >
+                <span
+                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  >TailwindCSS</span
+                >
               </div>
             </div>
           </div>
         </section>
-        
+
         <section>
-          <h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">Coming Soon</h2>
-          <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-6">
-            <h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">World Cup Historical Data</h3>
-            <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">Python</p>
+          <h2
+            class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6"
+          >
+            Coming Soon
+          </h2>
+          <div
+            class="border border-primary-200 dark:border-primary-800 rounded-lg p-6"
+          >
+            <h3 class="font-medium text-primary-900 dark:text-primary-100 mb-2">
+              World Cup Historical Data
+            </h3>
+            <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+              Python
+            </p>
             <p class="text-primary-500 dark:text-primary-500 text-sm">Soon</p>
           </div>
         </section>
       </div>
     </div>
   </main>
-</Layout> 
+</Layout>

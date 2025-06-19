@@ -17,7 +17,7 @@ export default function Sidebar() {
       <aside className="hidden md:flex flex-col items-start px-8 py-12 h-screen w-64 bg-transparent">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold text-primary-900 dark:text-primary-100 mb-10 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
-          Pascual Camacho
+          pascualcam
         </a>
         {/* Nav (aligned top and left, theme toggle last) */}
         <nav className="flex flex-col space-y-6 w-full items-start">

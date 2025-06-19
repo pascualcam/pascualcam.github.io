@@ -1,0 +1,29 @@
+---
+export interface Props {
+    title: string;
+    subtitle?: string;
+}
+const { title, subtitle = "" } = Astro.props;
+---
+
+<div
+    class="mb-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+>
+    <div>
+        <h1
+            class="text-4xl font-medium text-primary-900 dark:text-primary-100 mb-6"
+        >
+            {title}
+        </h1>
+        {
+            subtitle && (
+                <p class="text-xl text-primary-700 dark:text-primary-300">
+                    {subtitle}
+                </p>
+            )
+        }
+    </div>
+    <div class="flex justify-center md:justify-end self-center">
+        <slot name="right" />
+    </div>
+</div>
