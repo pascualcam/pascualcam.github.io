@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Sidebar from "../components/sections/Sidebar";
+import { getCollection } from "astro:content";
+
+// Get all notes from the content collection
+const notes = await getCollection("notes");
+// Sort by date (newest first)
+notes.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+);
 ---
 
 <Layout
@@ -23,24 +31,59 @@ import Sidebar from "../components/sections/Sidebar";
       </div>
 
       <div class="space-y-12">
-        <section>
-          <h2
-            class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6"
-          >
-            Coming Soon
-          </h2>
-          <div
-            class="border border-primary-200 dark:border-primary-800 rounded-lg p-8 text-center"
-          >
-            <p class="text-primary-600 dark:text-primary-400 mb-4">
-              This section will contain notes about technology, development, and
-              other interesting topics.
-            </p>
-            <p class="text-primary-500 dark:text-primary-500 text-sm">
-              In development...
-            </p>
-          </div>
-        </section>
+        {
+          notes.length > 0 ? (
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {notes.map((note) => (
+                <article class="bg-white dark:bg-primary-900 border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                  <div class="mb-4">
+                    <h2 class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2">
+                      {note.data.title}
+                    </h2>
+                    <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+                      {note.data.description}
+                    </p>
+                    <div class="flex items-center justify-between">
+                      <time class="text-primary-500 dark:text-primary-500 text-xs">
+                        {new Date(note.data.date).toLocaleDateString()}
+                      </time>
+                      {note.data.tags && note.data.tags.length > 0 && (
+                        <div class="flex gap-1">
+                          {note.data.tags.slice(0, 2).map((tag) => (
+                            <span class="bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-400 text-xs px-2 py-1 rounded">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <a
+                    href={`/notes/${note.slug}`}
+                    class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-200 text-sm font-medium"
+                  >
+                    Read more →
+                  </a>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <section>
+              <h2 class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6">
+                Coming Soon
+              </h2>
+              <div class="border border-primary-200 dark:border-primary-800 rounded-lg p-8 text-center">
+                <p class="text-primary-600 dark:text-primary-400 mb-4">
+                  This section will contain notes about technology, development,
+                  and other interesting topics.
+                </p>
+                <p class="text-primary-500 dark:text-primary-500 text-sm">
+                  In development...
+                </p>
+              </div>
+            </section>
+          )
+        }
       </div>
     </div>
   </main>

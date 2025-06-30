@@ -1,0 +1,77 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Sidebar from "../../components/sections/Sidebar";
+
+export async function getStaticPaths() {
+  const notes = await getCollection("notes");
+  return notes.map((note) => ({
+    params: { slug: note.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const noteEntry = (await getEntryBySlug(
+  "notes",
+  slug,
+)) as CollectionEntry<"notes"> | null;
+if (!noteEntry) {
+  throw new Error(`Note not found: ${slug}`);
+}
+const { data } = noteEntry;
+const { Content } = await noteEntry.render();
+---
+
+<Layout title={data.title} description={data.description}>
+  <Sidebar slot="sidebar" client:load />
+  <main class="min-h-screen py-20">
+    <div class="max-w-2xl mx-auto px-6">
+      <!-- Breadcrumbs -->
+      <nav class="mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li>
+            <a
+              href="/notes"
+              class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-200 transition-colors"
+            >
+              Notes
+            </a>
+          </li>
+          <li class="text-primary-400 dark:text-primary-500">/</li>
+          <li class="text-primary-900 dark:text-primary-100 font-medium">
+            {data.title}
+          </li>
+        </ol>
+      </nav>
+
+      <h1
+        class="text-4xl font-bold mb-2 text-primary-900 dark:text-primary-100"
+      >
+        {data.title}
+      </h1>
+      <div class="flex items-center gap-4 mb-6">
+        <time class="text-primary-500 dark:text-primary-400 text-sm"
+          >{new Date(data.date).toLocaleDateString()}</time
+        >
+        {
+          data.tags && data.tags.length > 0 && (
+            <div class="flex gap-1">
+              {data.tags.map((tag: string) => (
+                <span class="bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-400 text-xs px-2 py-1 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )
+        }
+      </div>
+      <p class="mb-8 text-primary-700 dark:text-primary-300">
+        {data.description}
+      </p>
+      <article class="prose dark:prose-invert max-w-none">
+        <Content />
+      </article>
+    </div>
+  </main>
+</Layout>

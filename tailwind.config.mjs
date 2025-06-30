@@ -61,8 +61,19 @@ export default {
             },
           },
         },
+        invert: {
+          css: {
+            color: '#f1f5f9',
+            a: {
+              color: '#38bdf8',
+              '&:hover': {
+                color: '#7dd3fc',
+              },
+            },
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 } 
