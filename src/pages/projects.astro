@@ -10,129 +10,129 @@ import HeroSection from "../components/HeroSection.astro";
 >
   <Sidebar slot="sidebar" client:load />
 
-  <main class="min-h-screen py-20">
-    <div class="max-w-4xl mx-auto px-6">
+  <main class="min-h-screen py-12">
+    <div class="max-w-3xl mx-auto px-6">
       <HeroSection title="Projects" subtitle="Selected work and side projects">
-        <span slot="right" class="text-6xl">🚲</span>
+        <span slot="right" class="text-3xl">🚲</span>
       </HeroSection>
 
-      <div class="space-y-12">
+      <div class="space-y-8">
         <section>
-          <div class="grid gap-8 md:grid-cols-2">
+          <div class="grid gap-4 md:grid-cols-2">
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4 hover:bg-primary-100/40 dark:hover:bg-dark-800/40 transition-all duration-300"
             >
               <h3
-                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+                class="text-sm font-normal text-primary-800 dark:text-primary-200 mb-1"
               >
                 <a href="https://kuwiapp.com" target="_blank" class="hover:underline">Kuwi</a>
               </h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+              <p class="text-primary-500 dark:text-primary-400 text-xs mb-2">
                 A family tree generator
               </p>
-              <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
+              <p class="text-primary-700 dark:text-primary-300 text-xs mb-3">
                 Built with Python, SQLAlchemy, and PostgreSQL. Helps families
                 visualize and maintain their genealogy.
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5">
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >TypeScript</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >Next.js</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >PostgreSQL</span
                 >
               </div>
             </div>
 
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4 hover:bg-primary-100/40 dark:hover:bg-dark-800/40 transition-all duration-300"
             >
               <h3
-                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+                class="text-sm font-normal text-primary-800 dark:text-primary-200 mb-1"
               >
                 <a href="https://coach.pascualcam.com" target="_blank" class="hover:underline">VeloxAI</a>
               </h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+              <p class="text-primary-500 dark:text-primary-400 text-xs mb-2">
                 Endurance Training AI Coach
               </p>
-              <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
+              <p class="text-primary-700 dark:text-primary-300 text-xs mb-3">
                 Wouldn't it be cool to have daily coach advice based on your Strava activities? This is it!
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5">
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >TypeScript</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >Next.js</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >PostgreSQL</span
                 >
               </div>
             </div>
 
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4 hover:bg-primary-100/40 dark:hover:bg-dark-800/40 transition-all duration-300"
             >
               <h3
-                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+                class="text-sm font-normal text-primary-800 dark:text-primary-200 mb-1"
               >
                 ML at Stanford
               </h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+              <p class="text-primary-500 dark:text-primary-400 text-xs mb-2">
                 Machine learning projects
               </p>
-              <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
+              <p class="text-primary-700 dark:text-primary-300 text-xs mb-3">
                 Various machine learning projects and experiments from Stanford
                 coursework.
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5">
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >Pandas</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >Jupyter</span
                 >
               </div>
             </div>
 
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4 hover:bg-primary-100/40 dark:hover:bg-dark-800/40 transition-all duration-300"
             >
               <h3
-                class="font-medium text-primary-900 dark:text-primary-100 mb-2"
+                class="text-sm font-normal text-primary-800 dark:text-primary-200 mb-1"
               >
                 This Website
               </h3>
-              <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
+              <p class="text-primary-500 dark:text-primary-400 text-xs mb-2">
                 Personal portfolio
               </p>
-              <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
+              <p class="text-primary-700 dark:text-primary-300 text-xs mb-3">
                 Built with Astro, React, and Tailwind CSS. Learning modern web
                 development.
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5">
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >Astro</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >React</span
                 >
                 <span
-                  class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                  class="text-xs bg-primary-100/30 dark:bg-dark-800/30 text-primary-500 dark:text-primary-400 px-1.5 py-0.5 rounded-sm"
                   >TailwindCSS</span
                 >
               </div>

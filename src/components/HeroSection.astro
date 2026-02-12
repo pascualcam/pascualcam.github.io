@@ -7,17 +7,17 @@ const { title, subtitle = "" } = Astro.props;
 ---
 
 <div
-    class="mb-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+    class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
 >
     <div>
         <h1
-            class="text-4xl font-medium text-primary-900 dark:text-primary-100 mb-6"
+            class="text-xl font-normal tracking-tight text-primary-900 dark:text-primary-100 mb-2"
         >
             {title}
         </h1>
         {
             subtitle && (
-                <p class="text-xl text-primary-700 dark:text-primary-300">
+                <p class="text-sm text-primary-500 dark:text-primary-400 italic">
                     {subtitle}
                 </p>
             )

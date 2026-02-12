@@ -10,21 +10,26 @@ import HeroSection from "../components/HeroSection.astro";
 >
   <Sidebar slot="sidebar" client:load />
 
-  <main class="min-h-screen py-20">
-    <div class="max-w-4xl mx-auto px-6">
+  <main class="min-h-screen py-12">
+    <div class="max-w-3xl mx-auto px-6">
       <HeroSection title="About Me">
-        <span slot="right" class="text-6xl">🚲</span>
+        <img
+          slot="right"
+          src="/avatar.jpeg"
+          alt="Pascual Camacho"
+          class="w-20 h-20 rounded-full object-cover border-2 border-primary-200/30 dark:border-dark-700/40"
+        />
       </HeroSection>
 
-      <div class="space-y-16">
+      <div class="space-y-8">
         <section>
           <h2
-            class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6"
+            class="text-sm font-normal italic text-primary-600 dark:text-primary-400 mb-4"
           >
             Engineer and tech enthusiast
           </h2>
-          <div class="prose prose-lg max-w-none">
-            <p class="text-primary-700 dark:text-primary-300 mb-4">
+          <div class="prose max-w-none">
+            <p class="text-primary-700 dark:text-primary-300 mb-3">
               Previously a Seismic Engineer, I found a passion for building
               complex programs and data intensive applications.
             </p>
@@ -41,101 +46,69 @@ import HeroSection from "../components/HeroSection.astro";
 
         <section>
           <h2
-            class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6"
+            class="text-sm font-normal italic text-primary-600 dark:text-primary-400 mb-4"
           >
             Interests
           </h2>
-          <div class="grid md:grid-cols-2 gap-6">
+          <div class="grid md:grid-cols-2 gap-4">
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4"
             >
               <h3
-                class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3"
+                class="text-sm font-normal italic text-primary-700 dark:text-primary-300"
               >
                 Road Cycling
               </h3>
-              <!-- <ul
-                class="text-primary-700 dark:text-primary-300 space-y-2 text-sm"
-              >
-                <li>• File-based routing system</li>
-                <li>• Static site generation</li>
-                <li>• Component integration</li>
-                <li>• Performance optimization</li>
-              </ul> -->
             </div>
 
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4"
             >
               <h3
-                class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3"
+                class="text-sm font-normal italic text-primary-700 dark:text-primary-300"
               >
                 Artificial Intelligence
               </h3>
-              <!-- <ul
-                class="text-primary-700 dark:text-primary-300 space-y-2 text-sm"
-              >
-                <li>• Interactive UI components</li>
-                <li>• State management</li>
-                <li>• Component composition</li>
-                <li>• Client-side interactivity</li>
-              </ul> -->
             </div>
 
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4"
             >
               <h3
-                class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3"
+                class="text-sm font-normal italic text-primary-700 dark:text-primary-300"
               >
                 Travel
               </h3>
-              <!-- <ul
-                class="text-primary-700 dark:text-primary-300 space-y-2 text-sm"
-              >
-                <li>• Utility-first styling</li>
-                <li>• Responsive design</li>
-                <li>• Custom design system</li>
-                <li>• Modern CSS practices</li>
-              </ul> -->
             </div>
 
             <div
-              class="border border-primary-200 dark:border-primary-800 rounded-lg p-6"
+              class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4"
             >
               <h3
-                class="text-lg font-medium text-primary-900 dark:text-primary-100 mb-3"
+                class="text-sm font-normal italic text-primary-700 dark:text-primary-300"
               >
                 Startups
               </h3>
-              <!-- <ul
-                class="text-primary-700 dark:text-primary-300 space-y-2 text-sm"
-              >
-                <li>• Git version control</li>
-                <li>• GitHub Actions CI/CD</li>
-                <li>• Static site deployment</li>
-                <li>• Performance monitoring</li>
-              </ul> -->
             </div>
           </div>
         </section>
 
         <section>
           <h2
-            class="text-2xl font-medium text-primary-900 dark:text-primary-100 mb-6"
+            class="text-sm font-normal italic text-primary-600 dark:text-primary-400 mb-4"
           >
             More
           </h2>
           <div
-            class="border border-primary-200 dark:border-primary-800 rounded-lg p-6 bg-primary-50 dark:bg-primary-900/20"
+            class="border border-primary-200/20 dark:border-dark-700/20 rounded-sm p-4 bg-primary-100/20 dark:bg-dark-800/20"
           >
-            <ul class="text-primary-700 dark:text-primary-300 space-y-3">
+            <ul class="text-primary-700 dark:text-primary-300 space-y-2 text-sm">
               <li class="flex items-start">
-                <span class="text-accent-600 dark:text-accent-400 mr-2">•</span>
+                <span class="text-primary-400 dark:text-primary-500 mr-2">•</span>
                 <span><strong>MS @Stanford in 2022</strong></span>
               </li>
               <li class="flex items-start">
-                <span class="text-accent-600 dark:text-accent-400 mr-2">•</span>
+                <span class="text-primary-400 dark:text-primary-500 mr-2">•</span>
                 <span>
                   <strong
                     >Founded Vita Health, a health tech startup in 2019</strong
@@ -143,15 +116,15 @@ import HeroSection from "../components/HeroSection.astro";
                 >
               </li>
               <li class="flex items-start">
-                <span class="text-accent-600 dark:text-accent-400 mr-2">•</span>
+                <span class="text-primary-400 dark:text-primary-500 mr-2">•</span>
                 <span><strong>I ride a Specialized Roubaix</strong></span>
               </li>
               <li class="flex items-start">
-                <span class="text-accent-600 dark:text-accent-400 mr-2">•</span>
+                <span class="text-primary-400 dark:text-primary-500 mr-2">•</span>
                 <span><strong>Not (very) active on Twitter</strong></span>
               </li>
               <li class="flex items-start">
-                <span class="text-accent-600 dark:text-accent-400 mr-2">•</span>
+                <span class="text-primary-400 dark:text-primary-500 mr-2">•</span>
                 <span><strong>Born and raised in 🇲🇽</strong></span>
               </li>
             </ul>

@@ -14,18 +14,18 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex flex-col items-start px-8 py-12 h-screen w-64 bg-transparent">
+      <aside className="hidden md:flex flex-col items-start px-8 py-10 h-screen w-64 bg-transparent">
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold text-primary-900 dark:text-primary-100 mb-10 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
-          pascualcam
+        <a href="/" className="text-sm font-normal tracking-normal text-primary-900 dark:text-primary-100 mb-10 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+          Pascual E. Camacho
         </a>
-        {/* Nav (aligned top and left, theme toggle last) */}
-        <nav className="flex flex-col space-y-6 w-full items-start">
+        {/* Nav */}
+        <nav className="flex flex-col space-y-4 w-full items-start">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 text-lg font-medium transition-colors duration-200"
+              className="text-primary-500 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 text-sm font-normal italic tracking-normal transition-colors duration-200"
             >
               {item.name}
             </a>
@@ -35,12 +35,12 @@ export default function Sidebar() {
       </aside>
 
       {/* Mobile Top Bar */}
-      <header className="md:hidden border-b border-primary-200 dark:border-primary-800 bg-white/80 dark:bg-dark-950/80 backdrop-blur-sm sticky top-0 z-50 transition-colors duration-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
+      <header className="md:hidden border-b border-primary-200/30 dark:border-dark-700/40 bg-primary-50/90 dark:bg-dark-900/90 backdrop-blur-sm sticky top-0 z-50 transition-colors duration-200">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="flex justify-between items-center h-14">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="text-lg font-medium text-primary-900 dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+              <a href="/" className="text-sm font-normal tracking-normal text-primary-900 dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
                 Pascual Camacho
               </a>
             </div>
@@ -51,7 +51,7 @@ export default function Sidebar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-primary-500 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 px-3 py-2 text-sm font-normal italic transition-colors duration-200"
                 >
                   {item.name}
                 </a>
@@ -64,7 +64,7 @@ export default function Sidebar() {
               <ThemeToggle />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 focus:outline-none p-2 transition-colors"
+                className="text-primary-500 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 focus:outline-none p-2 transition-colors"
                 aria-label="Toggle menu"
               >
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,13 +80,13 @@ export default function Sidebar() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden border-t border-primary-200 dark:border-primary-800 transition-colors duration-200">
+            <div className="md:hidden border-t border-primary-200/30 dark:border-dark-700/40 transition-colors duration-200">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 block px-3 py-2 text-base font-medium transition-colors duration-200"
+                    className="text-primary-500 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-100 block px-3 py-1.5 text-sm font-normal italic transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -99,4 +99,4 @@ export default function Sidebar() {
       </header>
     </>
   );
-} 
+}
