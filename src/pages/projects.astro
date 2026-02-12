@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Sidebar from "../components/sections/Sidebar";
-import AnimatedBicycle from "../components/AnimatedBicycle";
 import HeroSection from "../components/HeroSection.astro";
 ---
 
@@ -14,7 +13,7 @@ import HeroSection from "../components/HeroSection.astro";
   <main class="min-h-screen py-20">
     <div class="max-w-4xl mx-auto px-6">
       <HeroSection title="Projects" subtitle="Selected work and side projects">
-        <AnimatedBicycle slot="right" />
+        <span slot="right" class="text-6xl">🚲</span>
       </HeroSection>
 
       <div class="space-y-12">
@@ -43,11 +42,11 @@ import HeroSection from "../components/HeroSection.astro";
               <div class="flex flex-wrap gap-2">
                 <span
                   class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
-                  >Python</span
+                  >TypeScript</span
                 >
                 <span
                   class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
-                  >SQLAlchemy</span
+                  >Next.js</span
                 >
                 <span
                   class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
@@ -62,19 +61,18 @@ import HeroSection from "../components/HeroSection.astro";
               <h3
                 class="font-medium text-primary-900 dark:text-primary-100 mb-2"
               >
-                Wild Oasis
+                VeloxAI
               </h3>
               <p class="text-primary-600 dark:text-primary-400 text-sm mb-3">
-                Hotel booking platform
+                Endurance Training AI Coach
               </p>
               <p class="text-primary-700 dark:text-primary-300 text-sm mb-4">
-                A modern hotel website with booking functionality and admin
-                dashboard.
+                Wouldn't it be cool to have daily coach advice based on your Strava activities? This is it!
               </p>
               <div class="flex flex-wrap gap-2">
                 <span
                   class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
-                  >React</span
+                  >TypeScript</span
                 >
                 <span
                   class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
@@ -82,7 +80,7 @@ import HeroSection from "../components/HeroSection.astro";
                 >
                 <span
                   class="text-xs bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
-                  >TailwindCSS</span
+                  >PostgreSQL</span
                 >
               </div>
             </div>
